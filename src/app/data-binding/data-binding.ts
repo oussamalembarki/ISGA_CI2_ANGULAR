@@ -1,9 +1,19 @@
 import { Component } from '@angular/core';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-  imports: [],
   selector: 'app-data-binding',
-  styleUrl: './data-binding.css',
+  standalone: true,
+  imports: [JsonPipe],
   templateUrl: './data-binding.html',
+  styleUrl: './data-binding.css'
 })
-export class DataBinding {}
+export class DataBindingComponent {
+  ecole: string = 'ISI G2';
+
+  pers = {
+    num: 1,
+    nom: 'Lembarki',
+    prenom: 'Oussama'
+  };
+}
