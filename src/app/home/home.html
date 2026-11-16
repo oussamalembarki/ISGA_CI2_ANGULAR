@@ -1,3 +1,13 @@
-<div>
-    <h2>I'm Home Component !!</h2>
-</div>
+<section aria-labelledby="home-title">
+  <h1 id="home-title">Accueil des travaux pratiques</h1>
+  <p>Sélectionnez un TP pour le consulter.</p>
+
+  <ul class="tp-list">
+    @for (tp of tps; track tp.path) {
+      <li>
+        <a [routerLink]="tp.path">{{ tp.title }}</a>
+        <p>{{ tp.description }}</p>
+      </li>
+    }
+  </ul>
+</section>
