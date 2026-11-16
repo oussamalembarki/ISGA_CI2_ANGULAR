@@ -1,7 +1,36 @@
-.first-line {
-  background-color: #87ceeb;
+.site-header {
+  align-items: center;
+  background: #1f2937;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-.second-line {
-  background-color: #ffffe0;
+.site-title {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.page-content {
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 0 1.25rem;
 }

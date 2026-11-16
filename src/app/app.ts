@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { DataBindingComponent } from './data-binding/data-binding';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [DataBindingComponent],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class AppComponent {
-  title = 'demoAppGroupA_ISI';
 }
