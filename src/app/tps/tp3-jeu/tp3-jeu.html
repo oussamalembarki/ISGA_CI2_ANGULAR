@@ -1,0 +1,15 @@
+<section>
+  <h1>TP 3 - Jeu du nombre secret</h1>
+  <p>Devinez le nombre secret (entre 0 et 100). Essais restants : {{ essaisRestants }}</p>
+
+  <label for="guess">Votre proposition</label>
+  <input id="guess" type="number" min="0" max="100"
+         [(ngModel)]="nombreSaisi" [disabled]="termine">
+  <button (click)="verifier()" [disabled]="termine">Valider</button>
+
+  <p aria-live="polite"><strong>{{ message }}</strong></p>
+
+  @if (termine) {
+    <button (click)="rejouer()">Rejouer</button>
+  }
+</section>
